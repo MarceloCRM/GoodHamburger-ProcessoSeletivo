@@ -144,4 +144,5 @@ C:\Users\Marcelo\source\repos\GoodHamburger\GoodHamburger\obj\Debug\net8.0\refin
 C:\Users\Marcelo\source\repos\GoodHamburger\GoodHamburger\obj\Debug\net8.0\GoodHamburger.pdb
 C:\Users\Marcelo\source\repos\GoodHamburger\GoodHamburger\obj\Debug\net8.0\GoodHamburger.genruntimeconfig.cache
 C:\Users\Marcelo\source\repos\GoodHamburger\GoodHamburger\obj\Debug\net8.0\ref\GoodHamburger.dll
+C:\Users\Marcelo\source\repos\GoodHamburger\GoodHamburger\obj\Debug\net8.0\GoodHamburger.sourcelink.json
 C:\Users\Marcelo\source\repos\GoodHamburger\GoodHamburger\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

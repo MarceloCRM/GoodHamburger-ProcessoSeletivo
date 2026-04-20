@@ -1,9 +1,10 @@
-﻿using GoodHamburger.Models;
+﻿using GoodHamburger.Dtos;
 
 namespace GoodHamburger.Services.Interfaces
 {
     public interface IOrderService
     {
-        Task<List<Order>> GetAllAsync();
+        Task<List<OrderResponseDto>> GetAllAsync();
+        Task<OrderResponseDto> AddAsync(CreateOrderDto dto);
     }
 }

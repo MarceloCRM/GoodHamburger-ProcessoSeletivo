@@ -24,9 +24,11 @@ namespace GoodHamburger.Migrations
 
             modelBuilder.Entity("GoodHamburger.Models.Item", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Category")
                         .HasColumnType("int");
@@ -41,13 +43,52 @@ namespace GoodHamburger.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Items");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Category = 1,
+                            Name = "X Burger",
+                            Price = 5.00m
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Category = 1,
+                            Name = "X Egg",
+                            Price = 4.50m
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Category = 1,
+                            Name = "X Bacon",
+                            Price = 7.00m
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Category = 2,
+                            Name = "Batata frita",
+                            Price = 2.00m
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Category = 3,
+                            Name = "Refrigerante",
+                            Price = 2.50m
+                        });
                 });
 
             modelBuilder.Entity("GoodHamburger.Models.Order", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -68,15 +109,17 @@ namespace GoodHamburger.Migrations
 
             modelBuilder.Entity("GoodHamburger.Models.OrderItem", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("ItemId")
-                        .HasColumnType("uniqueidentifier");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<Guid>("OrderId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
