@@ -35,6 +35,8 @@ namespace GoodHamburger.Services
                 throw new Exception("Pedido não encontrado.");
             }
 
+            _orderPricingService.Calculate(order);
+
             return MapToResponseDto(order);
         }
 
@@ -69,6 +71,45 @@ namespace GoodHamburger.Services
             _orderPricingService.Calculate(order);
 
             _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+
+            return MapToResponseDto(order);
+        }
+        public async Task<OrderResponseDto> UpdateAsync(int id, CreateOrderDto dto)
+        {
+
+            var order = await _context.Orders.Include(oi => oi.Items).ThenInclude(ol => ol.Item).FirstOrDefaultAsync(o => o.Id == id);
+
+
+            if (order == null)
+                throw new Exception("Pedido não encontrado.");
+
+            if (dto.ItemIds == null || !dto.ItemIds.Any())
+                throw new Exception("O pedido deve conter ao menos um item.");
+
+            var itemsFromDb = await _context.Items
+                .Where(i => dto.ItemIds.Contains(i.Id))
+                .ToListAsync();
+
+            if (itemsFromDb.Count != dto.ItemIds.Count)
+                throw new Exception("Um ou mais itens não existem.");
+
+            var hasDuplicateCategory = itemsFromDb
+                .GroupBy(i => i.Category)
+                .Any(g => g.Count() > 1);
+
+            if (hasDuplicateCategory)
+                throw new Exception("Apenas um item por categoria é permitido.");
+
+
+            order.Items = itemsFromDb.Select(item => new OrderItem
+            {
+                ItemId = item.Id,
+                Item = item
+            }).ToList();
+
+            _orderPricingService.Calculate(order);
+
             await _context.SaveChangesAsync();
 
             return MapToResponseDto(order);

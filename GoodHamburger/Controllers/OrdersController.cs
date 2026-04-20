@@ -56,5 +56,19 @@ namespace GoodHamburger.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, CreateOrderDto dto)
+        {
+            try
+            {
+                var createdOrder = await _orderService.UpdateAsync(id, dto);
+                return CreatedAtRoute("GetById", new { createdOrder.Id }, createdOrder);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

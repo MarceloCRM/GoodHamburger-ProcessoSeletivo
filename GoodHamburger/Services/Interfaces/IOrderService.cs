@@ -7,5 +7,6 @@ namespace GoodHamburger.Services.Interfaces
         Task<List<OrderResponseDto>> GetAllAsync();
         Task<OrderResponseDto> GetByIdAsync(int id);
         Task<OrderResponseDto> AddAsync(CreateOrderDto dto);
+        Task<OrderResponseDto> UpdateAsync(int id, CreateOrderDto dto);
     }
 }
