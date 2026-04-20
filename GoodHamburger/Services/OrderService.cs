@@ -29,13 +29,11 @@ namespace GoodHamburger.Services
 
         public async Task<OrderResponseDto> GetByIdAsync(int id)
         {
-            var order = await _context.Orders
-                .Include(o => o.Items)
-                .ThenInclude(oi => oi.Item)
-                .FirstOrDefaultAsync(o => o.Id == id);
-
-            if (order == null)
+            var order = await _context.Orders.Include(o => o.Items).ThenInclude(oi => oi.Item).FirstOrDefaultAsync(o => o.Id == id);
+            if (order is null)
+            {
                 throw new Exception("Pedido não encontrado.");
+            }
 
             return MapToResponseDto(order);
         }

@@ -15,28 +15,20 @@
       "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\dtos\\orderitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\dtos\\orderitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\dtos\\orderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\dtos\\orderresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -62,47 +54,21 @@
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs*",
-              "RelativeToolTip": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:10:08.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\OrderResponseDto.cs",
-              "RelativeDocumentMoniker": "GoodHamburger\\DTOs\\OrderResponseDto.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\OrderResponseDto.cs*",
-              "RelativeToolTip": "GoodHamburger\\DTOs\\OrderResponseDto.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T21:09:28.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderItemResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\OrderItemResponseDto.cs",
-              "RelativeDocumentMoniker": "GoodHamburger\\DTOs\\OrderItemResponseDto.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\OrderItemResponseDto.cs*",
-              "RelativeToolTip": "GoodHamburger\\DTOs\\OrderItemResponseDto.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T21:09:15.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CreateOrderDTO.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\CreateOrderDTO.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\DTOs\\CreateOrderDTO.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\CreateOrderDTO.cs*",
-              "RelativeToolTip": "GoodHamburger\\DTOs\\CreateOrderDTO.cs*",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\CreateOrderDTO.cs",
+              "RelativeToolTip": "GoodHamburger\\DTOs\\CreateOrderDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:08:57.153Z",
@@ -116,7 +82,7 @@
               "RelativeDocumentMoniker": "GoodHamburger\\Controllers\\OrdersController.cs",
               "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Controllers\\OrdersController.cs*",
               "RelativeToolTip": "GoodHamburger\\Controllers\\OrdersController.cs*",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:04:15.938Z",
               "EditorCaption": ""
@@ -127,21 +93,21 @@
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs*",
-              "RelativeToolTip": "GoodHamburger\\Services\\OrderService.cs*",
-              "ViewState": "AgIAADwAAAAAAAAAAAAYwFEAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs",
+              "RelativeToolTip": "GoodHamburger\\Services\\OrderService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:01:58.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Models\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Models\\OrderItem.cs*",
-              "RelativeToolTip": "GoodHamburger\\Models\\OrderItem.cs*",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Models\\OrderItem.cs",
+              "RelativeToolTip": "GoodHamburger\\Models\\OrderItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T20:46:51.512Z",
@@ -149,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Models\\Order.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Models\\Order.cs",
@@ -162,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Models\\Item.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Models\\Item.cs",
@@ -179,20 +145,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Data\\AppDbContext.cs",
               "RelativeToolTip": "GoodHamburger\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwCIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T20:36:38.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "ItemsController.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Controllers\\ItemsController.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Controllers\\ItemsController.cs",
@@ -200,7 +166,8 @@
               "RelativeToolTip": "GoodHamburger\\Controllers\\ItemsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T20:33:59.573Z"
+              "WhenOpened": "2026-04-20T20:33:59.573Z",
+              "EditorCaption": ""
             }
           ]
         }

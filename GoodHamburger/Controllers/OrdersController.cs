@@ -18,8 +18,29 @@ namespace GoodHamburger.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var orders = await _orderService.GetAllAsync();
-            return Ok(orders);
+            try
+            {
+                var orders = await _orderService.GetAllAsync();
+                return Ok(orders);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet("{id}", Name = "GetById")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            try
+            {
+                var order = await _orderService.GetByIdAsync(id);
+                return Ok(order);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
         }
 
         [HttpPost]
@@ -28,7 +49,7 @@ namespace GoodHamburger.Controllers
             try
             {
                 var createdOrder = await _orderService.AddAsync(dto);
-                return Ok();
+                return CreatedAtRoute("GetById", new { createdOrder.Id }, createdOrder);
             }
             catch (Exception ex)
             {
