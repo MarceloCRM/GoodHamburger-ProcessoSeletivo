@@ -416,3 +416,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+appsettings.Development.json
+*.db-shm
+*.db-wal
+wwwroot/uploads/
