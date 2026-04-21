@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\layout\\navmenu.razor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\layout\\navmenu.razor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\layout\\mainlayout.razor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\layout\\mainlayout.razor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\pages\\orderdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\pages\\orderdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\pages\\createorder.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\pages\\createorder.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\pages\\orders.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\pages\\orders.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger.blazor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5D3653BD-C659-4112-BB2A-2D29A75786E6}|GoodHamburger.Blazor\\GoodHamburger.Blazor.csproj|solutionrelative:goodhamburger.blazor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,61 +58,167 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateOrderDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\CreateOrderDTO.cs",
-              "RelativeDocumentMoniker": "GoodHamburger\\DTOs\\CreateOrderDTO.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\DTOs\\CreateOrderDTO.cs",
-              "RelativeToolTip": "GoodHamburger\\DTOs\\CreateOrderDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T22:47:55.033Z",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAACgAAAAAAAAAAAAswCwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-21T16:23:45.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "GoodHamburger\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs",
-              "RelativeToolTip": "GoodHamburger\\Services\\OrderService.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAIwHsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T22:29:19.029Z"
+              "Title": "NavMenu.razor.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\NavMenu.razor.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Layout\\NavMenu.razor.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\NavMenu.razor.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Layout\\NavMenu.razor.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T16:23:43.377Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
-              "RelativeDocumentMoniker": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
-              "RelativeToolTip": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T21:10:08.182Z"
+              "DocumentIndex": 4,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAswGEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-21T16:16:27.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainLayout.razor.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\MainLayout.razor.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Layout\\MainLayout.razor.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\MainLayout.razor.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Layout\\MainLayout.razor.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T16:16:23.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\wwwroot\\css\\app.css",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "GoodHamburger.Blazor\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAM0BAAAAAAAAAAAgwPEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-21T16:12:27.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDetails.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\OrderDetails.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Pages\\OrderDetails.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\OrderDetails.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Pages\\OrderDetails.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T16:13:30.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\Index.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Pages\\Index.razor",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAD8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T16:13:05.556Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "GoodHamburger\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "GoodHamburger\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwEoAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T21:04:15.938Z",
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T16:12:17.128Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateOrder.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\CreateOrder.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Pages\\CreateOrder.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\CreateOrder.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Pages\\CreateOrder.razor",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAgwLYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T15:37:11.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T15:34:58.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Orders.razor",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\Orders.razor",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Pages\\Orders.razor",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Pages\\Orders.razor",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Pages\\Orders.razor",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAcwGEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-21T15:34:01.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "GoodHamburger.Blazor\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger.Blazor\\Services\\ApiService.cs",
+              "RelativeToolTip": "GoodHamburger.Blazor\\Services\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T15:16:57.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }

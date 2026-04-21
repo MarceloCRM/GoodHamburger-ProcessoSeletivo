@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "ItemsController",
-    "Method": "GetItems",
+    "Method": "GetItemsAsync",
     "RelativePath": "api/Items",
     "HttpMethod": "GET",
     "IsController": true,

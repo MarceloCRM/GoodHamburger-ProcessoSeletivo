@@ -1,16 +1,39 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@inherits LayoutComponentBase
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-logo">🍔</div>
+            <div class="brand-text">
+                <h1>Good Hamburger</h1>
+                <span>Gestão de Pedidos</span>
+            </div>
         </div>
 
-        <article class="content px-4">
+        <div class="nav-menu-container">
+            <NavMenu />
+        </div>
+        
+        <div class="sidebar-footer">
+            &copy; @DateTime.Now.Year Good Hamburger
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="topbar-content">
+                <div class="topbar-title">
+                    <h2>Bem-vindo(a)</h2>
+                    <p>O que vamos preparar hoje?</p>
+                </div>
+                <div class="topbar-actions">
+                    <span class="badge badge-primary">Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
             @Body
-        </article>
-    </main>
+        </main>
+    </div>
 </div>

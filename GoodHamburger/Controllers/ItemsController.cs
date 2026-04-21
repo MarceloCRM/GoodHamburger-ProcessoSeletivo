@@ -1,5 +1,6 @@
 ﻿using GoodHamburger.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -13,9 +14,9 @@ public class ItemsController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetItems()
+    public async Task<IActionResult> GetItemsAsync()
     {
-        var items = _context.Items.ToList();
+        var items = await _context.Items.ToListAsync();
         return Ok(items);
     }
 }

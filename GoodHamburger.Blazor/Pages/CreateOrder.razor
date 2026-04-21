@@ -1,0 +1,201 @@
+@page "/create-order"
+@using GoodHamburger.Blazor.Models
+@using GoodHamburger.Blazor.Services
+@inject ApiService ApiService
+
+<PageTitle>Novo Pedido - Good Hamburger</PageTitle>
+
+<div class="flex items-center justify-between mb-4">
+    <div>
+        <h2>Novo Pedido</h2>
+        <p class="text-muted">Selecione os itens do cardápio para montar o pedido.</p>
+    </div>
+    <button class="btn btn-secondary" @onclick="ClearSelection">
+        <span>🔄</span> Limpar Seleção
+    </button>
+</div>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        <span>⚠️</span> @errorMessage
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success">
+        <span>✅</span> @successMessage
+    </div>
+}
+
+<div class="split-layout">
+    <!-- Main Content: Menu Items -->
+    <div class="menu-section">
+        @if (items is null || !items.Any())
+        {
+            <div class="empty-state">
+                <div class="empty-state-icon">🍔</div>
+                <p>Carregando o cardápio maravilhoso...</p>
+            </div>
+        }
+        else
+        {
+            var categories = items.Select(i => i.Category).Distinct().ToList();
+
+            foreach (var category in categories)
+            {
+                <div class="mb-4" style="margin-top: 32px;">
+                    <h3 class="font-bold mb-4" style="font-size: 1.25rem; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">
+                        @category
+                    </h3>
+                    <div class="menu-grid">
+                        @foreach (var item in items.Where(i => i.Category == category))
+                        {
+                            var isSelected = selectedItemIds.Contains(item.Id);
+                            <label class="menu-item-card @(isSelected ? "selected" : "")">
+                                <input type="checkbox"
+                                       checked="@isSelected"
+                                       @onchange="(e => ToggleSelection(item.Id, (bool)(e.Value ?? false)))" />
+                                
+                                <div class="menu-item-content">
+                                    <h4 class="menu-item-title">@item.Name</h4>
+                                    <span class="menu-item-category">@item.Category</span>
+                                </div>
+                                
+                                <div class="menu-item-price">
+                                    R$ @item.Price.ToString("0.00")
+                                </div>
+                            </label>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+
+    <!-- Right Sidebar: Order Summary -->
+    <div class="summary-section">
+        <div class="summary-panel">
+            <div class="summary-header">
+                <h3 class="font-bold">Resumo do Pedido</h3>
+                <p class="text-muted" style="font-size: 0.85rem;">Verifique os itens antes de confirmar.</p>
+            </div>
+
+            @if (!selectedItems.Any())
+            {
+                <div class="empty-state" style="padding: 32px 16px;">
+                    <p style="margin: 0; font-size: 0.95rem;">Nenhum item selecionado.</p>
+                </div>
+            }
+            else
+            {
+                <div class="summary-items">
+                    @foreach (var item in selectedItems)
+                    {
+                        <div class="summary-item">
+                            <span class="summary-item-name">@item.Name</span>
+                            <span class="summary-item-price">R$ @item.Price.ToString("0.00")</span>
+                        </div>
+                    }
+                </div>
+
+                <div class="summary-totals">
+                    <div class="summary-total-row">
+                        <span>Subtotal estimado</span>
+                        <span class="font-semibold">R$ @selectedItems.Sum(i => i.Price).ToString("0.00")</span>
+                    </div>
+                    <div class="summary-total-row discount">
+                        <span>Descontos</span>
+                        <span>Aplicados no final</span>
+                    </div>
+                    <div class="summary-total-row" style="margin-top: 12px; border-top: 1px solid #E2E8F0; padding-top: 12px;">
+                        <span>Total Parcial</span>
+                        <span style="font-size: 1.2rem;">R$ @selectedItems.Sum(i => i.Price).ToString("0.00")</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.1rem;" @onclick="CreateOrderAsync">
+                    Confirmar e Enviar
+                </button>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<ItemDto> items = new();
+    private List<int> selectedItemIds = new();
+    private string? successMessage;
+    private string? errorMessage;
+
+    private IEnumerable<ItemDto> selectedItems =>
+        items.Where(i => selectedItemIds.Contains(i.Id));
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            items = await ApiService.GetItemsAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro ao carregar itens: {ex.Message}";
+        }
+    }
+
+    private void ToggleSelection(int itemId, bool isChecked)
+    {
+        if (isChecked)
+        {
+            if (!selectedItemIds.Contains(itemId))
+                selectedItemIds.Add(itemId);
+        }
+        else
+        {
+            selectedItemIds.Remove(itemId);
+        }
+    }
+
+    private async Task CreateOrderAsync()
+    {
+        if (!selectedItemIds.Any())
+        {
+            errorMessage = "Selecione pelo menos um item.";
+            return;
+        }
+
+        successMessage = null;
+        errorMessage = null;
+
+        try
+        {
+            var dto = new CreateOrderDto
+            {
+                ItemsIds = selectedItemIds
+            };
+
+            var createdOrder = await ApiService.CreateOrderAsync(dto);
+
+            if (createdOrder is null)
+            {
+                errorMessage = "Não foi possível criar o pedido.";
+                return;
+            }
+
+            successMessage = $"Pedido #{createdOrder.Id} criado com sucesso! Total final: R$ {createdOrder.Total:0.00}";
+            selectedItemIds.Clear();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro ao criar pedido: {ex.Message}";
+        }
+    }
+
+    private void ClearSelection()
+    {
+        selectedItemIds.Clear();
+        successMessage = null;
+        errorMessage = null;
+    }
+}

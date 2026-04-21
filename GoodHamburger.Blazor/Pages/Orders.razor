@@ -1,0 +1,128 @@
+@page "/orders"
+@using GoodHamburger.Blazor.Models
+@using GoodHamburger.Blazor.Services
+@inject ApiService ApiService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Meus Pedidos - Good Hamburger</PageTitle>
+
+<div class="flex items-center justify-between mb-4">
+    <div>
+        <h2>Histórico de Pedidos</h2>
+        <p class="text-muted">Consulte e gerencie todos os pedidos realizados.</p>
+    </div>
+    <button class="btn btn-primary" @onclick="LoadOrders">
+        <span>🔄</span> Atualizar Lista
+    </button>
+</div>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        <span>⚠️</span> @errorMessage
+    </div>
+}
+
+@if (orders is null)
+{
+    <div class="empty-state">
+        <div class="empty-state-icon">⏳</div>
+        <p>Buscando os pedidos mais deliciosos...</p>
+    </div>
+}
+else if (!orders.Any())
+{
+    <div class="empty-state">
+        <div class="empty-state-icon">🍽️</div>
+        <p>Ainda não há pedidos registrados.</p>
+        <a href="/create-order" class="btn btn-primary mt-4">Criar Meu Primeiro Pedido</a>
+    </div>
+}
+else
+{
+    <div class="order-list-container">
+        @foreach (var order in orders.OrderByDescending(o => o.CreatedAt))
+        {
+            <div class="order-list-card">
+                <div class="order-info">
+                    <div class="order-id">
+                        #@order.Id
+                    </div>
+                    <div class="order-details-col">
+                        <span class="order-items-preview">
+                            @(order.Items?.Count ?? 0) @((order.Items?.Count == 1) ? "item" : "itens") neste pedido
+                        </span>
+                        <span class="order-date">
+                            Realizado em @order.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy 'às' HH:mm")
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <div class="order-price-col">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Total Pago</span>
+                        <div class="order-price">R$ @order.Total.ToString("0.00")</div>
+                    </div>
+                    
+                    <div class="order-actions">
+                        <button class="btn btn-secondary" @onclick="() => OpenDetails(order.Id)">
+                            Detalhes
+                        </button>
+                        <button class="btn btn-danger-soft btn-icon" title="Excluir" @onclick="() => DeleteOrder(order.Id)">
+                            🗑️
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<OrderResponseDto>? orders;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadOrders();
+    }
+
+    private async Task LoadOrders()
+    {
+        errorMessage = null;
+
+        try
+        {
+            orders = await ApiService.GetOrdersAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro ao carregar pedidos: {ex.Message}";
+        }
+    }
+
+    private void OpenDetails(int id)
+    {
+        NavigationManager.NavigateTo($"/orders/{id}");
+    }
+
+    private async Task DeleteOrder(int id)
+    {
+        try
+        {
+            var result = await ApiService.DeleteOrderAsync(id);
+
+            if (result is null)
+            {
+                errorMessage = "Não foi possível excluir o pedido.";
+                return;
+            }
+
+            await LoadOrders();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro ao excluir pedido: {ex.Message}";
+        }
+    }
+}

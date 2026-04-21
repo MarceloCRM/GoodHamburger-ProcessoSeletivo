@@ -1,0 +1,141 @@
+@page "/orders/{Id:int}"
+@using GoodHamburger.Blazor.Models
+@using GoodHamburger.Blazor.Services
+@inject ApiService ApiService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Detalhes do Pedido - Good Hamburger</PageTitle>
+
+<div class="mb-4">
+    <button class="btn btn-secondary mb-4" @onclick="GoBack">
+        <span>⬅️</span> Voltar para Pedidos
+    </button>
+</div>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        <span>⚠️</span> @errorMessage
+    </div>
+}
+else if (order is null)
+{
+    <div class="empty-state">
+        <div class="empty-state-icon">⏳</div>
+        <p>Carregando os detalhes do pedido...</p>
+    </div>
+}
+else
+{
+    <div class="detail-header">
+        <div class="detail-title">
+            <span class="badge badge-primary mb-2">Pedido Concluído</span>
+            <h2>Pedido #@order.Id</h2>
+            <p>
+                <span>📅</span> Realizado em @order.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy 'às' HH:mm")
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-primary" @onclick="GoToCreateOrder">
+                Refazer Pedido
+            </button>
+        </div>
+    </div>
+
+    <div class="detail-summary-cards mb-4" style="margin-bottom: 32px;">
+        <div class="detail-card">
+            <h4>Subtotal</h4>
+            <div class="amount" style="color: var(--text-main);">
+                R$ @order.Subtotal.ToString("0.00")
+            </div>
+        </div>
+
+        <div class="detail-card">
+            <h4>Descontos Aplicados</h4>
+            <div class="amount" style="color: #38A169;">
+                - R$ @order.Discount.ToString("0.00")
+            </div>
+        </div>
+
+        <div class="detail-card total-card">
+            <h4>Total Final</h4>
+            <div class="amount">
+                R$ @order.Total.ToString("0.00")
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 class="font-bold mb-4">Itens do Pedido</h3>
+        
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Categoria</th>
+                        <th style="text-align: right;">Preço Unitário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (order.Items != null && order.Items.Any())
+                    {
+                        @foreach (var item in order.Items)
+                        {
+                            <tr>
+                                <td class="font-semibold text-main">@item.Name</td>
+                                <td>
+                                    <span class="badge badge-gray">@item.Category</span>
+                                </td>
+                                <td style="text-align: right; font-weight: 600;">
+                                    R$ @item.Price.ToString("0.00")
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3" style="text-align: center; color: var(--text-muted); padding: 32px;">
+                                Nenhum item listado para este pedido.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private OrderResponseDto? order;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            order = await ApiService.GetOrderByIdAsync(Id);
+
+            if (order is null)
+                errorMessage = "Pedido não encontrado.";
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Erro ao buscar pedido: {ex.Message}";
+        }
+    }
+
+    void GoToCreateOrder()
+    {
+        NavigationManager.NavigateTo("/create-order");
+    }
+    
+    private void GoBack()
+    {
+        NavigationManager.NavigateTo("/orders");
+    }
+}

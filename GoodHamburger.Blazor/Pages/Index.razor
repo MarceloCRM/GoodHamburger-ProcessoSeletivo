@@ -1,0 +1,64 @@
+@page "/"
+
+<PageTitle>Dashboard - Good Hamburger</PageTitle>
+
+<div class="hero-banner">
+    <span class="badge badge-dark" style="width: fit-content; margin-bottom: 16px; background: rgba(255,255,255,0.2);">Visão Geral</span>
+    <h1>Gestão de pedidos sem complicação.</h1>
+    <p>Acompanhe o desempenho, gerencie seu cardápio e crie novos pedidos com agilidade. A interface agora oferece o contraste perfeito para o seu trabalho diário.</p>
+    
+    <div class="hero-actions">
+        <a href="/create-order" class="btn btn-primary">
+            <span>🍔</span> Criar Pedido
+        </a>
+        <a href="/orders" class="btn" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">
+            Ver Histórico
+        </a>
+    </div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon-wrapper" style="background: #e0e7ff; color: #0284c7;">
+            🚀
+        </div>
+        <div class="stat-content">
+            <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Pedidos Rápidos</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Monte lanches e feche vendas em segundos com a nova interface.</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon-wrapper" style="background: #dcfce7; color: #16a34a;">
+            💸
+        </div>
+        <div class="stat-content">
+            <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Promoções Ativas</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Descontos e combos são aplicados automaticamente no subtotal.</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon-wrapper" style="background: #f3e8ff; color: #4f46e5;">
+            📈
+        </div>
+        <div class="stat-content">
+            <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Controle Total</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Gerencie todos os pedidos registrados e mantenha o caixa organizado.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="flex items-center justify-between mb-4">
+        <div>
+            <h3 class="font-bold">Acesso Rápido</h3>
+            <p class="text-muted">Ações mais utilizadas no sistema</p>
+        </div>
+    </div>
+    
+    <div class="flex gap-4">
+        <a href="/create-order" class="btn btn-primary">Iniciar Novo Pedido</a>
+        <a href="/orders" class="btn btn-secondary">Acompanhar Entregas</a>
+    </div>
+</div>
