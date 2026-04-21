@@ -8,5 +8,6 @@ namespace GoodHamburger.Services.Interfaces
         Task<OrderResponseDto> GetByIdAsync(int id);
         Task<OrderResponseDto> AddAsync(CreateOrderDto dto);
         Task<OrderResponseDto> UpdateAsync(int id, CreateOrderDto dto);
+        Task<OrderResponseDto> DeleteAsync(int id);
     }
 }

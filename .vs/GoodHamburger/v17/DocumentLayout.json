@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\dtos\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|c:\\users\\marcelo\\source\\repos\\goodhamburger\\goodhamburger\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A2B6B6-524F-44DC-9343-2F308708E3FF}|GoodHamburger\\GoodHamburger.csproj|solutionrelative:goodhamburger\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -43,39 +43,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs*",
-              "RelativeToolTip": "GoodHamburger\\Services\\OrderService.cs*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCMAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\OrderService.cs",
+              "RelativeToolTip": "GoodHamburger\\Services\\OrderService.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAIwHsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T22:29:19.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
               "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
               "RelativeToolTip": "GoodHamburger\\Services\\Interfaces\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:10:08.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "GoodHamburger\\Controllers\\OrdersController.cs",
               "ToolTip": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "GoodHamburger\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDMAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:04:15.938Z",
               "EditorCaption": ""

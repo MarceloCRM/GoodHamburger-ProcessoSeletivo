@@ -44,7 +44,7 @@ namespace GoodHamburger.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreateOrderDto dto)
+        public async Task<IActionResult> Post(CreateOrderDto dto)
         {
             try
             {
@@ -64,6 +64,20 @@ namespace GoodHamburger.Controllers
             {
                 var createdOrder = await _orderService.UpdateAsync(id, dto);
                 return CreatedAtRoute("GetById", new { createdOrder.Id }, createdOrder);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var order = await _orderService.DeleteAsync(id);
+                return Ok(order);
             }
             catch (Exception ex)
             {

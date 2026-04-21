@@ -115,6 +115,20 @@ namespace GoodHamburger.Services
             return MapToResponseDto(order);
         }
 
+        public async Task<OrderResponseDto> DeleteAsync(int id)
+        {
+            var order = await _context.Orders.Include(o => o.Items).ThenInclude(oi => oi.Item).FirstOrDefaultAsync(o => o.Id == id);
+            if (order is null)
+            {
+                throw new Exception("Pedido não encontrado.");
+            }
+
+            _context.Orders.Remove(order);
+            await _context.SaveChangesAsync();
+
+            return MapToResponseDto(order);
+        }
+
         private static OrderResponseDto MapToResponseDto(Order order)
         {
             return new OrderResponseDto
