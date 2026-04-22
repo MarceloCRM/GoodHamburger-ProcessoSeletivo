@@ -1,127 +1,112 @@
+@page "/cadastro"
 @page "/create-order"
 @using GoodHamburger.Blazor.Models
 @using GoodHamburger.Blazor.Services
 @inject ApiService ApiService
 
-<PageTitle>Novo Pedido - Good Hamburger</PageTitle>
+<PageTitle>Cadastro - Good Hamburger</PageTitle>
 
-<div class="flex items-center justify-between mb-4">
-    <div>
-        <h2>Novo Pedido</h2>
-        <p class="text-muted">Selecione os itens do cardápio para montar o pedido.</p>
-    </div>
-    <button class="btn btn-secondary" @onclick="ClearSelection">
-        <span>🔄</span> Limpar Seleção
-    </button>
-</div>
+<PageHeader Titulo="Novo pedido" Descricao="Escolha os itens e salve.">
+    <Acoes>
+        <button class="btn btn-secondary" @onclick="ClearSelection">Limpar</button>
+    </Acoes>
+</PageHeader>
 
 @if (!string.IsNullOrEmpty(errorMessage))
 {
-    <div class="alert alert-danger">
-        <span>⚠️</span> @errorMessage
-    </div>
+    <div class="alert alert-danger">@errorMessage</div>
 }
 
 @if (!string.IsNullOrEmpty(successMessage))
 {
-    <div class="alert alert-success">
-        <span>✅</span> @successMessage
-    </div>
+    <div class="alert alert-success">@successMessage</div>
 }
 
-<div class="split-layout">
-    <!-- Main Content: Menu Items -->
-    <div class="menu-section">
+<section class="builder-layout">
+    <div class="builder-layout__content">
         @if (items is null || !items.Any())
         {
-            <div class="empty-state">
-                <div class="empty-state-icon">🍔</div>
-                <p>Carregando o cardápio maravilhoso...</p>
-            </div>
+            <section class="surface-card">
+                <EmptyState Titulo="Carregando cardapio" Descricao="Aguarde um instante." />
+            </section>
         }
         else
         {
-            var categories = items.Select(i => i.Category).Distinct().ToList();
-
-            foreach (var category in categories)
+            @foreach (var category in items.Select(i => i.Category).Distinct().OrderBy(c => c))
             {
-                <div class="mb-4" style="margin-top: 32px;">
-                    <h3 class="font-bold mb-4" style="font-size: 1.25rem; border-bottom: 2px solid var(--border-light); padding-bottom: 8px;">
-                        @category
-                    </h3>
+                <section class="surface-card section-card">
+                    <div class="section-card__header">
+                        <h2>@GetCategoryLabel(category)</h2>
+                    </div>
+
                     <div class="menu-grid">
                         @foreach (var item in items.Where(i => i.Category == category))
                         {
                             var isSelected = selectedItemIds.Contains(item.Id);
-                            <label class="menu-item-card @(isSelected ? "selected" : "")">
+                            <label class="catalog-card @(isSelected ? "catalog-card--selected" : string.Empty)">
                                 <input type="checkbox"
                                        checked="@isSelected"
-                                       @onchange="(e => ToggleSelection(item.Id, (bool)(e.Value ?? false)))" />
-                                
-                                <div class="menu-item-content">
-                                    <h4 class="menu-item-title">@item.Name</h4>
-                                    <span class="menu-item-category">@item.Category</span>
-                                </div>
-                                
-                                <div class="menu-item-price">
-                                    R$ @item.Price.ToString("0.00")
+                                       @onchange="(e => ToggleSelection(item, (bool)(e.Value ?? false)))" />
+
+                                <div class="catalog-card__header">
+                                    <strong>@item.Name</strong>
+                                    <strong>@Currency(item.Price)</strong>
                                 </div>
                             </label>
                         }
                     </div>
-                </div>
+                </section>
             }
         }
     </div>
 
-    <!-- Right Sidebar: Order Summary -->
-    <div class="summary-section">
-        <div class="summary-panel">
-            <div class="summary-header">
-                <h3 class="font-bold">Resumo do Pedido</h3>
-                <p class="text-muted" style="font-size: 0.85rem;">Verifique os itens antes de confirmar.</p>
+    <aside class="builder-layout__sidebar">
+        <div class="surface-card summary-card">
+            <div class="section-card__header">
+                <h2>Resumo</h2>
             </div>
 
             @if (!selectedItems.Any())
             {
-                <div class="empty-state" style="padding: 32px 16px;">
-                    <p style="margin: 0; font-size: 0.95rem;">Nenhum item selecionado.</p>
-                </div>
+                <EmptyState Titulo="Sem itens" Descricao="Selecione ao menos um item." />
             }
             else
             {
-                <div class="summary-items">
+                <div class="summary-list">
                     @foreach (var item in selectedItems)
                     {
-                        <div class="summary-item">
-                            <span class="summary-item-name">@item.Name</span>
-                            <span class="summary-item-price">R$ @item.Price.ToString("0.00")</span>
+                        <div class="summary-list__row">
+                            <span>@item.Name</span>
+                            <strong>@Currency(item.Price)</strong>
                         </div>
                     }
                 </div>
 
-                <div class="summary-totals">
-                    <div class="summary-total-row">
-                        <span>Subtotal estimado</span>
-                        <span class="font-semibold">R$ @selectedItems.Sum(i => i.Price).ToString("0.00")</span>
+                <div class="totals-box">
+                    <div class="totals-box__row">
+                        <span>Subtotal</span>
+                        <strong>@Currency(selectedSubtotal)</strong>
                     </div>
-                    <div class="summary-total-row discount">
-                        <span>Descontos</span>
-                        <span>Aplicados no final</span>
+                    <div class="totals-box__row">
+                        <span>Desconto</span>
+                        <strong class="totals-box__discount">- @Currency(selectedDiscount)</strong>
                     </div>
-                    <div class="summary-total-row" style="margin-top: 12px; border-top: 1px solid #E2E8F0; padding-top: 12px;">
-                        <span>Total Parcial</span>
-                        <span style="font-size: 1.2rem;">R$ @selectedItems.Sum(i => i.Price).ToString("0.00")</span>
+                    <div class="totals-box__row totals-box__row--total">
+                        <span>Total</span>
+                        <strong>@Currency(selectedTotal)</strong>
                     </div>
                 </div>
 
-                <button class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.1rem;" @onclick="CreateOrderAsync">
-                    Confirmar e Enviar
-                </button>
+                @if (!string.IsNullOrEmpty(discountDescription))
+                {
+                    <p class="summary-note">@discountDescription</p>
+                }
             }
+
+            <button class="btn btn-primary btn-block" style="margin-top:10px;"@onclick="CreateOrderAsync">Salvar pedido</button>
         </div>
-    </div>
-</div>
+    </aside>
+</section>
 
 @code {
     private List<ItemDto> items = new();
@@ -129,8 +114,43 @@
     private string? successMessage;
     private string? errorMessage;
 
-    private IEnumerable<ItemDto> selectedItems =>
-        items.Where(i => selectedItemIds.Contains(i.Id));
+    private IEnumerable<ItemDto> selectedItems => items.Where(i => selectedItemIds.Contains(i.Id));
+    private decimal selectedSubtotal => selectedItems.Sum(i => i.Price);
+    private decimal selectedDiscount => decimal.Round(selectedSubtotal * selectedDiscountRate, 2);
+    private decimal selectedTotal => selectedSubtotal - selectedDiscount;
+    private decimal selectedDiscountRate
+    {
+        get
+        {
+            var hasSandwich = selectedItems.Any(i => i.Category == 1);
+            var hasFries = selectedItems.Any(i => i.Category == 2);
+            var hasDrink = selectedItems.Any(i => i.Category == 3);
+
+            if (hasSandwich && hasFries && hasDrink)
+            {
+                return 0.20m;
+            }
+
+            if (hasSandwich && hasDrink)
+            {
+                return 0.15m;
+            }
+
+            if (hasSandwich && hasFries)
+            {
+                return 0.10m;
+            }
+
+            return 0m;
+        }
+    }
+    private string? discountDescription => selectedDiscountRate switch
+    {
+        0.20m => "Desconto de 20% aplicado no combo completo.",
+        0.15m => "Desconto de 15% aplicado em sanduiche com bebida.",
+        0.10m => "Desconto de 10% aplicado em sanduiche com acompanhamento.",
+        _ => null
+    };
 
     protected override async Task OnInitializedAsync()
     {
@@ -140,21 +160,21 @@
         }
         catch (Exception ex)
         {
-            errorMessage = $"Erro ao carregar itens: {ex.Message}";
+            errorMessage = $"Erro ao carregar o cardapio: {ex.Message}";
         }
     }
 
-    private void ToggleSelection(int itemId, bool isChecked)
+    private void ToggleSelection(ItemDto item, bool isChecked)
     {
+        selectedItemIds.RemoveAll(id => items.Any(existing => existing.Id == id && existing.Category == item.Category));
+
         if (isChecked)
         {
-            if (!selectedItemIds.Contains(itemId))
-                selectedItemIds.Add(itemId);
+            selectedItemIds.Add(item.Id);
         }
-        else
-        {
-            selectedItemIds.Remove(itemId);
-        }
+
+        successMessage = null;
+        errorMessage = null;
     }
 
     private async Task CreateOrderAsync()
@@ -172,23 +192,23 @@
         {
             var dto = new CreateOrderDto
             {
-                ItemsIds = selectedItemIds
+                ItemIds = selectedItemIds
             };
 
             var createdOrder = await ApiService.CreateOrderAsync(dto);
 
             if (createdOrder is null)
             {
-                errorMessage = "Não foi possível criar o pedido.";
+                errorMessage = "Nao foi possivel salvar o pedido.";
                 return;
             }
 
-            successMessage = $"Pedido #{createdOrder.Id} criado com sucesso! Total final: R$ {createdOrder.Total:0.00}";
+            successMessage = $"Pedido #{createdOrder.Id} salvo com sucesso.";
             selectedItemIds.Clear();
         }
         catch (Exception ex)
         {
-            errorMessage = $"Erro ao criar pedido: {ex.Message}";
+            errorMessage = $"Erro ao salvar o pedido: {ex.Message}";
         }
     }
 
@@ -198,4 +218,14 @@
         successMessage = null;
         errorMessage = null;
     }
+
+    private static string GetCategoryLabel(int category) => category switch
+    {
+        1 => "Sanduiches",
+        2 => "Acompanhamentos",
+        3 => "Bebidas",
+        _ => "Outros"
+    };
+
+    private static string Currency(decimal value) => $"R$ {value:0.00}";
 }

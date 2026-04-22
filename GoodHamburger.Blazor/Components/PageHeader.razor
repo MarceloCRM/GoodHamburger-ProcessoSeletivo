@@ -1,0 +1,36 @@
+<section class="page-header">
+    <div class="page-header__content">
+        @if (!string.IsNullOrWhiteSpace(Secao))
+        {
+            <span class="page-header__eyebrow">@Secao</span>
+        }
+
+        <h1>@Titulo</h1>
+
+        @if (!string.IsNullOrWhiteSpace(Descricao))
+        {
+            <p>@Descricao</p>
+        }
+    </div>
+
+    @if (Acoes is not null)
+    {
+        <div class="page-header__actions">
+            @Acoes
+        </div>
+    }
+</section>
+
+@code {
+    [Parameter]
+    public string? Secao { get; set; }
+
+    [Parameter, EditorRequired]
+    public string Titulo { get; set; } = string.Empty;
+
+    [Parameter]
+    public string? Descricao { get; set; }
+
+    [Parameter]
+    public RenderFragment? Acoes { get; set; }
+}

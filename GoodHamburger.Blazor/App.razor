@@ -4,9 +4,16 @@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Not found</PageTitle>
+        <PageTitle>Página não encontrada</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <section class="surface-card">
+                <div class="empty-state">
+                    <div class="empty-state__icon">404</div>
+                    <strong>Página não encontrada</strong>
+                    <p>O endereço informado não existe neste sistema.</p>
+                    <a class="btn btn-primary" href="/">Voltar para o início</a>
+                </div>
+            </section>
         </LayoutView>
     </NotFound>
 </Router>

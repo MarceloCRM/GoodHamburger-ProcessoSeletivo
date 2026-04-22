@@ -1,5 +1,6 @@
 ﻿using GoodHamburger.Blazor.Models;
 using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace GoodHamburger.Blazor.Services
 {
@@ -39,7 +40,8 @@ namespace GoodHamburger.Blazor.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                return null;
+                var message = await ReadErrorMessageAsync(response);
+                throw new Exception(message ?? "Nao foi possivel criar o pedido.");
             }
 
             return await response.Content.ReadFromJsonAsync<OrderResponseDto>();
@@ -51,7 +53,8 @@ namespace GoodHamburger.Blazor.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                return null;
+                var message = await ReadErrorMessageAsync(response);
+                throw new Exception(message ?? "Nao foi possivel atualizar o pedido.");
             }
 
             return await response.Content.ReadFromJsonAsync<OrderResponseDto>();
@@ -67,6 +70,29 @@ namespace GoodHamburger.Blazor.Services
             }
 
             return await response.Content.ReadFromJsonAsync<OrderResponseDto>();
+        }
+
+        private static async Task<string?> ReadErrorMessageAsync(HttpResponseMessage response)
+        {
+            try
+            {
+                using var contentStream = await response.Content.ReadAsStreamAsync();
+                var payload = await JsonSerializer.DeserializeAsync<ApiErrorResponse>(contentStream, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+
+                return payload?.Message;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private sealed class ApiErrorResponse
+        {
+            public string? Message { get; set; }
         }
 
     }

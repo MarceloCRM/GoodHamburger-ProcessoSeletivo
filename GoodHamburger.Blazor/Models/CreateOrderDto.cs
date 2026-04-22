@@ -2,6 +2,6 @@
 {
     public class CreateOrderDto
     {
-        public List<int> ItemsIds { get; set; } = new ();
+        public List<int> ItemIds { get; set; } = new();
     }
 }

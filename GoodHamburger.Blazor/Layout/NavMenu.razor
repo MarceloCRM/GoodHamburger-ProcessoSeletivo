@@ -1,58 +1,29 @@
-@inject NavigationManager NavigationManager
-@implements IDisposable
+<nav class="sidebar-nav" aria-label="Navegacao principal">
+    <NavLink href="/" Match="NavLinkMatch.All" class="sidebar-nav__item" ActiveClass="sidebar-nav__item--active" @onclick="NotificarNavegacao">
+        <span class="sidebar-nav__icon"></span>
+        <span class="sidebar-nav__text">Inicio</span>
+    </NavLink>
 
-<ul class="menu-list">
-    <li>
-        <button class="menu-link @(IsActive("") ? "active" : "")" @onclick='() => NavigateTo("")'>
-            <span class="menu-icon">📊</span>
-            <span class="menu-label">Dashboard</span>
-        </button>
-    </li>
-    <li>
-        <button class="menu-link @(IsActive("create-order") ? "active" : "")" @onclick='() => NavigateTo("create-order")'>
-            <span class="menu-icon">🍔</span>
-            <span class="menu-label">Novo Pedido</span>
-        </button>
-    </li>
-    <li>
-        <button class="menu-link @(IsActive("orders") ? "active" : "")" @onclick='() => NavigateTo("orders")'>
-            <span class="menu-icon">📋</span>
-            <span class="menu-label">Meus Pedidos</span>
-        </button>
-    </li>
-</ul>
+    <NavLink href="/registros" class="sidebar-nav__item" ActiveClass="sidebar-nav__item--active" @onclick="NotificarNavegacao">
+        <span class="sidebar-nav__icon"></span>
+        <span class="sidebar-nav__text">Registros</span>
+    </NavLink>
+
+    <NavLink href="/cadastro" class="sidebar-nav__item" ActiveClass="sidebar-nav__item--active" @onclick="NotificarNavegacao">
+        <span class="sidebar-nav__icon"></span>
+        <span class="sidebar-nav__text">Cadastro</span>
+    </NavLink>
+</nav>
 
 @code {
-    private string currentUrl = string.Empty;
+    [Parameter]
+    public EventCallback OnNavigate { get; set; }
 
-    protected override void OnInitialized()
+    private async Task NotificarNavegacao()
     {
-        currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
-        NavigationManager.LocationChanged += OnLocationChanged;
-    }
-
-    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
-    {
-        currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
-        StateHasChanged();
-    }
-
-    private bool IsActive(string path)
-    {
-        if (string.IsNullOrEmpty(path))
+        if (OnNavigate.HasDelegate)
         {
-            return string.IsNullOrEmpty(currentUrl);
+            await OnNavigate.InvokeAsync();
         }
-        return currentUrl.StartsWith(path, StringComparison.OrdinalIgnoreCase);
-    }
-
-    private void NavigateTo(string path)
-    {
-        NavigationManager.NavigateTo(path);
-    }
-
-    public void Dispose()
-    {
-        NavigationManager.LocationChanged -= OnLocationChanged;
     }
 }

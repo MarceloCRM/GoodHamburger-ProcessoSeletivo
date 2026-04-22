@@ -1,0 +1,30 @@
+<section class="empty-state">
+    @if (!string.IsNullOrWhiteSpace(Icone))
+    {
+        <div class="empty-state__icon">@Icone</div>
+    }
+
+    <strong>@Titulo</strong>
+    <p>@Descricao</p>
+
+    @if (Acoes is not null)
+    {
+        <div class="empty-state__actions">
+            @Acoes
+        </div>
+    }
+</section>
+
+@code {
+    [Parameter]
+    public string? Icone { get; set; }
+
+    [Parameter, EditorRequired]
+    public string Titulo { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string Descricao { get; set; } = string.Empty;
+
+    [Parameter]
+    public RenderFragment? Acoes { get; set; }
+}

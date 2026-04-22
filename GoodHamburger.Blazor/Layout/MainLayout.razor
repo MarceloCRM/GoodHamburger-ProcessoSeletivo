@@ -1,39 +1,85 @@
 @inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@implements IDisposable
 
-<div class="app-layout">
-    <aside class="sidebar">
-        <div class="brand">
-            <div class="brand-logo">🍔</div>
-            <div class="brand-text">
-                <h1>Good Hamburger</h1>
-                <span>Gestão de Pedidos</span>
-            </div>
-        </div>
+<div class="app-shell">
+    <aside class="app-sidebar @(menuMobileAberto ? "app-sidebar--open" : string.Empty)">
+        <a class="sidebar-brand" href="/">
+            <span class="sidebar-brand__logo">GH</span>
+            <span class="sidebar-brand__text">
+                <strong>Good Hamburger</strong>
+                <small>Sistema</small>
+            </span>
+        </a>
 
-        <div class="nav-menu-container">
-            <NavMenu />
-        </div>
-        
-        <div class="sidebar-footer">
-            &copy; @DateTime.Now.Year Good Hamburger
-        </div>
+        <NavMenu OnNavigate="FecharMenuMobile" />
     </aside>
 
-    <div class="main-wrapper">
-        <header class="topbar">
-            <div class="topbar-content">
-                <div class="topbar-title">
-                    <h2>Bem-vindo(a)</h2>
-                    <p>O que vamos preparar hoje?</p>
-                </div>
-                <div class="topbar-actions">
-                    <span class="badge badge-primary">Admin</span>
-                </div>
-            </div>
-        </header>
+    <button class="app-overlay @(menuMobileAberto ? "app-overlay--visible" : string.Empty)" @onclick="FecharMenuMobile" aria-label="Fechar menu"></button>
 
-        <main class="content-area">
+    <div class="app-main">
+        <main class="app-content">
             @Body
         </main>
     </div>
 </div>
+
+@code {
+    private bool menuMobileAberto;
+    private string rotaAtual = string.Empty;
+
+    private string TituloAtual => ObterTituloDaRota();
+
+    protected override void OnInitialized()
+    {
+        rotaAtual = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        NavigationManager.LocationChanged += AtualizarRota;
+    }
+
+    private void AtualizarRota(object? sender, LocationChangedEventArgs e)
+    {
+        rotaAtual = NavigationManager.ToBaseRelativePath(e.Location);
+        menuMobileAberto = false;
+        StateHasChanged();
+    }
+
+    private string ObterTituloDaRota()
+    {
+        if (string.IsNullOrWhiteSpace(rotaAtual))
+        {
+            return "Inicio";
+        }
+
+        if (rotaAtual.StartsWith("registros/", StringComparison.OrdinalIgnoreCase) || rotaAtual.StartsWith("orders/", StringComparison.OrdinalIgnoreCase))
+        {
+            return "Detalhes";
+        }
+
+        if (rotaAtual.StartsWith("registros", StringComparison.OrdinalIgnoreCase) || rotaAtual.StartsWith("orders", StringComparison.OrdinalIgnoreCase))
+        {
+            return "Registros";
+        }
+
+        if (rotaAtual.StartsWith("cadastro", StringComparison.OrdinalIgnoreCase) || rotaAtual.StartsWith("create-order", StringComparison.OrdinalIgnoreCase))
+        {
+            return "Cadastro";
+        }
+
+        return "Sistema";
+    }
+
+    private void AlternarMenuMobile()
+    {
+        menuMobileAberto = !menuMobileAberto;
+    }
+
+    private void FecharMenuMobile()
+    {
+        menuMobileAberto = false;
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= AtualizarRota;
+    }
+}

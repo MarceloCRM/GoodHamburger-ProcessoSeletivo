@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Od7LmXyK4m4=",
+  "dgSpecHash": "ZFMKkdrtu7c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marcelo\\source\\repos\\GoodHamburger\\GoodHamburger\\GoodHamburger.csproj",
+  "projectFilePath": "C:\\Users\\Marcelo\\Desktop\\Programação\\SelectiveProcessSgGenetics\\GoodHamburger-ProcessoSeletivo\\GoodHamburger\\GoodHamburger.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcelo\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Marcelo\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
