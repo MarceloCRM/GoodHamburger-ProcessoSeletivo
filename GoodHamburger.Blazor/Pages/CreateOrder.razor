@@ -27,7 +27,7 @@
         @if (items is null || !items.Any())
         {
             <section class="surface-card">
-                <EmptyState Titulo="Carregando cardapio" Descricao="Aguarde um instante." />
+                <EmptyState Titulo="Carregando cardápio" Descricao="Aguarde um instante." />
             </section>
         }
         else
@@ -103,7 +103,7 @@
                 }
             }
 
-            <button class="btn btn-primary btn-block" style="margin-top:10px;"@onclick="CreateOrderAsync">Salvar pedido</button>
+            <button class="btn btn-primary btn-block" style="margin-top:10px;" @onclick="CreateOrderAsync">Salvar pedido</button>
         </div>
     </aside>
 </section>
@@ -147,8 +147,8 @@
     private string? discountDescription => selectedDiscountRate switch
     {
         0.20m => "Desconto de 20% aplicado no combo completo.",
-        0.15m => "Desconto de 15% aplicado em sanduiche com bebida.",
-        0.10m => "Desconto de 10% aplicado em sanduiche com acompanhamento.",
+        0.15m => "Desconto de 15% aplicado em sanduíche com bebida.",
+        0.10m => "Desconto de 10% aplicado em sanduíche com acompanhamento.",
         _ => null
     };
 
@@ -160,7 +160,7 @@
         }
         catch (Exception ex)
         {
-            errorMessage = $"Erro ao carregar o cardapio: {ex.Message}";
+            errorMessage = $"Erro ao carregar o cardápio: {ex.Message}";
         }
     }
 
@@ -199,7 +199,7 @@
 
             if (createdOrder is null)
             {
-                errorMessage = "Nao foi possivel salvar o pedido.";
+                errorMessage = "Não foi possível salvar o pedido.";
                 return;
             }
 
@@ -221,7 +221,7 @@
 
     private static string GetCategoryLabel(int category) => category switch
     {
-        1 => "Sanduiches",
+        1 => "Sanduíches",
         2 => "Acompanhamentos",
         3 => "Bebidas",
         _ => "Outros"

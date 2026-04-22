@@ -3,9 +3,9 @@
 @using GoodHamburger.Blazor.Services
 @inject ApiService ApiService
 
-<PageTitle>Inicio - Good Hamburger</PageTitle>
+<PageTitle>Início - Good Hamburger</PageTitle>
 
-<PageHeader Titulo="Inicio" Descricao="Acesse rapido as principais areas do sistema.">
+<PageHeader Titulo="Início" Descricao="Acesse rapidamente as principais áreas do sistema.">
     <Acoes>
         <a class="btn btn-primary" href="/cadastro">Novo pedido</a>
     </Acoes>
@@ -28,20 +28,20 @@
     </article>
 
     <article class="simple-stat">
-        <span>Itens no cardapio</span>
+        <span>Itens no cardápio</span>
         <strong>@items.Count</strong>
     </article>
 </section>
 
 <section class="surface-card section-card">
     <div class="section-card__header">
-        <h2>Ultimos registros</h2>
+        <h2>Últimos registros</h2>
         <a class="text-link" href="/registros">Ver todos</a>
     </div>
 
     @if (!orders.Any())
     {
-        <EmptyState Titulo="Nenhum registro" Descricao="Crie o primeiro pedido para comecar." />
+        <EmptyState Titulo="Nenhum registro" Descricao="Crie o primeiro pedido para começar." />
     }
     else
     {
@@ -76,7 +76,7 @@
         }
         catch (Exception ex)
         {
-            errorMessage = $"Nao foi possivel carregar os dados: {ex.Message}";
+            errorMessage = $"Não foi possível carregar os dados: {ex.Message}";
         }
     }
 

@@ -21,7 +21,7 @@
 <section class="surface-card section-card">
     @if (orders is null)
     {
-        <EmptyState Titulo="Carregando" Descricao="Buscando registros." />
+        <EmptyState Titulo="Carregando" Descricao="Buscando registros..." />
     }
     else if (!orders.Any())
     {
@@ -113,7 +113,7 @@
 
             if (result is null)
             {
-                errorMessage = "Nao foi possivel excluir o registro.";
+                errorMessage = "Não foi possível excluir o registro.";
                 return;
             }
 

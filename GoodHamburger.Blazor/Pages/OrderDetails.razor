@@ -20,7 +20,7 @@
 else if (order is null)
 {
     <section class="surface-card">
-        <EmptyState Titulo="Carregando" Descricao="Buscando pedido." />
+        <EmptyState Titulo="Carregando" Descricao="Buscando pedido..." />
     </section>
 }
 else
@@ -53,7 +53,7 @@ else
                         <tr>
                             <th>Item</th>
                             <th>Categoria</th>
-                            <th>Preco</th>
+                            <th>Preço</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,7 +71,7 @@ else
         }
         else
         {
-            <EmptyState Titulo="Sem itens" Descricao="Este pedido nao possui itens." />
+            <EmptyState Titulo="Sem itens" Descricao="Este pedido não possui itens." />
         }
     </section>
 }
@@ -91,7 +91,7 @@ else
 
             if (order is null)
             {
-                errorMessage = "Pedido nao encontrado.";
+                errorMessage = "Pedido não encontrado.";
             }
         }
         catch (Exception ex)

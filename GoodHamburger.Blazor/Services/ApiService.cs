@@ -41,7 +41,7 @@ namespace GoodHamburger.Blazor.Services
             if (!response.IsSuccessStatusCode)
             {
                 var message = await ReadErrorMessageAsync(response);
-                throw new Exception(message ?? "Nao foi possivel criar o pedido.");
+                throw new Exception(message ?? "Não foi possível criar o pedido.");
             }
 
             return await response.Content.ReadFromJsonAsync<OrderResponseDto>();
@@ -54,7 +54,7 @@ namespace GoodHamburger.Blazor.Services
             if (!response.IsSuccessStatusCode)
             {
                 var message = await ReadErrorMessageAsync(response);
-                throw new Exception(message ?? "Nao foi possivel atualizar o pedido.");
+                throw new Exception(message ?? "Não foi possível atualizar o pedido.");
             }
 
             return await response.Content.ReadFromJsonAsync<OrderResponseDto>();

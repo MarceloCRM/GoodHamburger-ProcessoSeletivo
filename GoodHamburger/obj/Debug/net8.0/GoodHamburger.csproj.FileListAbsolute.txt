@@ -287,4 +287,3 @@ C:\Users\Marcelo\Desktop\Programação\SelectiveProcessSgGenetics\GoodHamburger-
 C:\Users\Marcelo\Desktop\Programação\SelectiveProcessSgGenetics\GoodHamburger-ProcessoSeletivo\GoodHamburger\bin\Debug\net8.0\GoodHamburger.pdb
 C:\Users\Marcelo\Desktop\Programação\SelectiveProcessSgGenetics\GoodHamburger-ProcessoSeletivo\GoodHamburger\obj\Debug\net8.0\GoodHamburger.genruntimeconfig.cache
 C:\Users\Marcelo\Desktop\Programação\SelectiveProcessSgGenetics\GoodHamburger-ProcessoSeletivo\GoodHamburger\obj\Debug\net8.0\ref\GoodHamburger.dll
-C:\Users\Marcelo\Desktop\Programação\SelectiveProcessSgGenetics\GoodHamburger-ProcessoSeletivo\GoodHamburger\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
